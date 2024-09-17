@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baiting Simulation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #00c9ff, #92fe9d);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            padding: 30px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .offer {
+            background-color: #e0f7fa;
+            border: 1px solid #4dd0e1;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #00bfa5;
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: transform 0.3s, background-color 0.3s;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #00796b;
+            transform: scale(1.1);
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Baiting Simulation</h1>
+        <p>Congratulations! You've been selected for a free prize.</p>
+        <div class="offer">
+            <p>Click the button below to claim your free gift card worth $500. Just enter your personal details to get started.</p>
+        </div>
+        <button class="button" onclick="revealBaiting()">Claim Now</button>
+
+        <div class="hidden-content" id="hidden-content">
+            <p>This is a baiting simulation. Baiting uses false promises to lure victims into giving up personal information.</p>
+        </div>
+    </div>
+
+    <script>
+        function revealBaiting() {
+            document.getElementById("hidden-content").style.display = "block";
+        }
+    </script>
+</body>
+</html>
